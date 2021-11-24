@@ -21,6 +21,6 @@ Route::prefix('/agencies')->group(function (){
     Route::post('/create',[AgencyController::class,'store'])->name('agencies.store');
     Route::get('/{id}/update',[AgencyController::class,'edit'])->name('agencies.edit');
     Route::post('/{id}/update',[AgencyController::class,'update'])->name('update');
-    Route::post('/delete',[AgencyController::class,'delete']);
+    Route::post('/{id}/delete',[AgencyController::class,'delete']);
     Route::get('/search',[AgencyController::class,'search'])->name('agency.search');
 });
